@@ -15,7 +15,7 @@ app.use(cors());
 //3. mysql db정보 설정하기
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-    host:'127.0.0.1',
+    host:'database',
     user:'root',
     password:'1234',
     database:'kdt'
@@ -524,4 +524,5 @@ app.post('/api/contactus', (req, res) => {
             res.send('문의 등록 완료')
         }
     )
+
 })
